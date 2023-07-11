@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: 'poppins', sans-serif;
+            box-sizing: border-box;
+        }
+
+        h1,
+        h2 {
+            font-family: Impact, Charcoal, sans-serif;
+        }
+
+        .content__price {
+            font-family: "Times New Roman", serif;
+        }
+
+        .content__subtitle {
+            font-family: Verdana, Geneva, sans-serif;
+        }
+
+        .content__text {
+            font-family: Arial, sans-serif;
+        }
+
+        .section__title {
+            font-family: "Courier New", Courier, monospace;
+        }
+
+        .specification__title {
+            font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+        }
+
+        .container {
+            width: 50%;
+            height: 50vh;
+            background-image: url(images/zx10r.png);
+            background-size: cover;
+            background-position: center;
+            padding: 20px 10%;
+        }
+
+        nav {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space;
+        }
+
+        .content {
+            margin-top: 10%;
+        }
+
+        .content h2 {
+            color: #43b20c;
+            font-size: 34px;
+        }
+
+        .content h1 {
+            font-size: 100px;
+            color: #eeeeee;
+            margin-top: -25px;
+        }
+
+        .more-features {
+            margin-left: 45%;
+        }
+
+        .button {
+            background-color: green;
+            border: none;
+            color: white;
+            text-align: center;
+            display: inline-block;
+            font-size: 16px;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 20px;
+            padding: 20px;
+            max-width: 800px;
+            margin: 0 auto;
+            overflow: auto;
+        }
+
+        .card {
+            background-color: black;
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .card img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .card h3 {
+            color: green;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: white;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-weight: bold;
+        }
+
+        head {
+            background-image: url("https://kawasaki-india.com/");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        .header-strip {
+            background-color: black;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            padding: 1px 200px;
+        }
+
+        .header-strip__button {
+            color: white;
+            background-color: gray;
+            padding: 15px 10px;
+            margin-right: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        .topnav {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 16px;
+        }
+
+        /* Style for the links */
+        .topnav a {
+            color: green;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        /* Style for the active link */
+        .topnav a.active {
+            font-weight: bold;
+        }
+
+        /* Style for the dropdown button */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+            background-color: black;
+            color: white;
+            padding: 10px;
+        }
+
+        /* Style for the dropdown content */
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: black;
+            min-width: 200px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        /* Style for the dropdown links */
+        .dropdown-content a {
+            color: white;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+        }
+
+        /* Style for the dropdown links on hover */
+        .dropdown-content a:hover {
+            background-color: #555;
+        }
+
+        /* Show the dropdown content when the dropdown button is hovered */
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        text.header__link {
+            decoration: none;
+        }
+
+        .header__nav .header__logo {
+            width: 250px;
+            cursor: pointer;
+            background-color: black;
+        }
+
+        .header__list1 {
+            display: flex;
+            list-style: none;
+            padding: 0;
+        }
+
+        .header__list1 li {
+            margin-right: 50px;
+        }
+
+        .header__link1 {
+            text-decoration: none;
+            color: #696f68;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-strip">
+            <nav>
+                <div class="header__logo">Logo</div>
+                <ul class="header__list1">
+                    <li><a class="header__link1" href="#">Home</a></li>
+                    <li><a class="header__link1" href="#">About</a></li>
+                    <li><a class="header__link1" href="#">Products</a></li>
+                    <li><a class="header__link1" href="#">Services</a></li>
+                    <li><a class="header__link1" href="#">Contact</a></li>
+                    <li>
+                        <div class="dropdown">
+                            <button class="dropbtn">More</button>
+                            <div class="dropdown-content">
+                                <a href="#">PRODUCTS</a>
+                                <a href="#">LOCATORS</a>
+                                <a href="#">PARTS & ACCESSORIES</a>
+                                <a href="#">SERVICE</a>
+                                <a href="#">EVENTS</a>
+                                <a href="#">ON ROAD PRICE ESTIMATOR</a>
+                                <a href="#">CONTACT US</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <button class="header-strip__button">Button</button>
+            </nav>
+        </div>
+    </header>
+</body>
+</html>
